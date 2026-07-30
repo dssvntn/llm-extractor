@@ -44,7 +44,7 @@ git clone https://github.com/dssvntn/llm-extractor.git
 cd llm-extractor
 2. Создать .env
 
-Откройте .env, замените на свой ключ (получить можно на опен роутере, если надо будет, я помогу):
+Скопируйте .env.example, замените на свой ключ (получить можно на опен роутере, если надо будет, я помогу):
 
 OPENROUTER_API_KEY=sk-or-v1-xxxxxxxxxxxxxxxx
 
