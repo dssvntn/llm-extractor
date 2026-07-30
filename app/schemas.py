@@ -4,31 +4,36 @@ from pydantic import BaseModel, Field
 
 
 class Item(BaseModel):
-    """A single product or service extracted from a document."""
+    """Одна позиция товара или услуги."""
 
-    name: str = Field(description="Product or service name")
-    price: float = Field(description="Price of the product or service")
+    name: str = Field(
+        description="Название товара или услуги"
+    )
+
+    price: float = Field(
+        description="Цена товара или услуги"
+    )
 
 
 class ExtractedDocument(BaseModel):
-    """Structured data extracted from a document."""
+    """Структурированные данные, извлечённые из документа."""
 
     date: datetime | None = Field(
         default=None,
-        description="Document date and time, if present",
+        description="Дата и время документа, если указаны"
     )
 
     document_number: str | None = Field(
         default=None,
-        description="Document number, if present",
+        description="Номер документа, если указан"
     )
 
     total_amount: float | None = Field(
         default=None,
-        description="Final total amount, if present",
+        description="Итоговая сумма документа, если указана"
     )
 
     items: list[Item] = Field(
         default_factory=list,
-        description="Products or services found in the document",
+        description="Список товаров или услуг из документа"
     )
