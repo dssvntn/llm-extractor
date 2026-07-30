@@ -44,3 +44,7 @@ EMPTY_DOCUMENT = """
 
 Спасибо!
 """
+    assert result.date is None
+    assert result.document_number is None
+    assert result.total_amount is None
+    assert result.items == []
