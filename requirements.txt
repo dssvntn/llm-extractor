@@ -1,4 +1,4 @@
-google-genai
+httpx
 pydantic
 pytest
 python-dotenv
